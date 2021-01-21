@@ -78,8 +78,7 @@ let app = new Vue({
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(order)
-            }).then(response => response.json())
-            .then(data => { return data }).catch(error => { return data});
+            }).catch(error => console.log(error));
 
         },
         updateAvailableSpaces(item) {
@@ -92,8 +91,7 @@ let app = new Vue({
                 body: JSON.stringify({
                     availableSpaces: item.lesson.availableSpaces
                 })
-            }).then(response => response.json())
-            .then(data => { return data }).catch(error => { return data});
+            }).catch(error => console.log(error));
 
         },
         accessLessons(){
